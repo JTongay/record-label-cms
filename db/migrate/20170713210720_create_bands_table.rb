@@ -4,7 +4,6 @@ class CreateBandsTable < ActiveRecord::Migration[5.0]
       t.string :band_name
       t.string :location
       t.string :start_date
-      
       t.timestamps
     end
   end
