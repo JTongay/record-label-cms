@@ -5,3 +5,4 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Band.create(band_name: 'Falsetta', city: 'Austin', state: 'TX', start_date: '06/2008')
