@@ -1,33 +1,7 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-NOTE:
-Paperclip is now compatible with aws-sdk >= 2.0.0.
-
-If you are using S3 storage, aws-sdk >= 2.0.0 requires you to make a few small
-changes:
+#To clear caching issue with coffescript
+```shell
+rake tmp:cache:clear
+```
 
 * You must set the `s3_region`
 * If you are explicitly setting permissions anywhere, such as in an initializer,
