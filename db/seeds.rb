@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 DatabaseCleaner.clean_with(:truncation)
 
-Band.create(band_name: 'Falsetta', city: 'Austin', state: 'TX', start_date: '06/2008')
+Band.create(band_name: 'Falsetta', city: 'Austin', state: 'TX', start_date: Date.new(2008,2,1))
 Band.create(band_name: '', city: '', state: '', start_date: '')
 Band.create(band_name: '', city: '', state: '', start_date: '')
 Band.create(band_name: '', city: '', state: '', start_date: '')
