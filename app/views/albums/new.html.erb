@@ -1,5 +1,6 @@
 <h1>Add Album</h1>
 
-<%=	simple_form_for @band do |t|  %>
-  
+<%=	simple_form_for @album do |f|  %>
+  <%=	f.input :band_ids, collection: @bands, label: 'Select Band'  %>
+  <%=	f.input :title, label: 'Album Title' %>
 <% end %>
