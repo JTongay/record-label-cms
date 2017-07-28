@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170725011610) do
+ActiveRecord::Schema.define(version: 20170728221340) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "albums", force: :cascade do |t|
     t.string   "title"
-    t.string   "release_date"
+    t.date     "release_date"
     t.string   "album_type"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
@@ -44,10 +44,22 @@ ActiveRecord::Schema.define(version: 20170725011610) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "bands_genres", id: false, force: :cascade do |t|
+    t.integer "band_id",  null: false
+    t.integer "genre_id", null: false
+    t.index ["band_id", "genre_id"], name: "index_bands_genres_on_band_id_and_genre_id", using: :btree
+  end
+
   create_table "bands_musicians", id: false, force: :cascade do |t|
     t.integer "band_id",     null: false
     t.integer "musician_id", null: false
     t.index ["band_id", "musician_id"], name: "index_bands_musicians_on_band_id_and_musician_id", using: :btree
+  end
+
+  create_table "genres", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "instruments", force: :cascade do |t|
