@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :bands, only: [ :new, :create, :edit ]
+  resources :bands, only: [ :new, :create, :edit, :index ]
   resources :albums, only: [ :new, :create, :edit ]
   root to: 'welcome#index'
 
