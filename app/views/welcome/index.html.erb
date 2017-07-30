@@ -3,8 +3,20 @@
   <%= image_tag 'random_logo.png', class: "logo logo-container-items" %>
 </div>
 
-<p>Current Roster</p>
-<% @bands.each do |b| %>
-    <h1><%=b.band_name %></h1>
-    <p><%=b.city %>, <%=b.state %></p>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <p>Current Roster</p>
+     <% @bands.each do |b| %>
+        <h1><%=b.band_name %></h1>
+        <p><%=b.city %>, <%=b.state %></p>
+      <% end %>
+    </div>
+    <div class="col-md-6 text-center">
+      <p>Recent and Upcoming Releases</p>
+      <% @ordered_albums.each do |b| %>
+        <p><%=	b.title  %>, <%=	b.release_date.to_formatted_s(:long_ordinal)  %>, <%= b.bands[0].band_name %></p>
+      <% end %>
+    </div>
+  </div>
+</div>

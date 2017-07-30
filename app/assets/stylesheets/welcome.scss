@@ -3,16 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .logo-container{
+  padding: 60px;
   display: flex;
   justify-content: center;
-
+  flex-direction: row-reverse;
   .logo{
-    max-width: 200px;
-    max-height: 200px;
+    max-width: 100px;
+    max-height: 100px;
   }
 
   .logo-container-items {
-
+    align-self: center;
   }
 }
 
