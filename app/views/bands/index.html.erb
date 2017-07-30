@@ -3,6 +3,6 @@
     <p><%= b.band_name %></p>
     <p><%=	b.albums.length  %>, albums</p>
     <%	b.albums.each do |a|  %>
-          <p> - <%= a.title %>, <%= a.album_type %>, <%= a.release_date.to_formatted_s(:long_ordinal) %> </p>
-          <% end %>
+        <p> - <%= a.title %>, <%= a.album_type %>, <%= a.release_date.to_formatted_s(:long_ordinal) %> </p>
+    <% end %>
 <% end %>

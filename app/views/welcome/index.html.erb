@@ -1,3 +1,9 @@
+<div class="logo-container">
+  <h1 class="logo-container-items">Fake Record Label</h1>
+  <%= image_tag 'random_logo.png', class: "logo logo-container-items" %>
+</div>
+
+<p>Current Roster</p>
 <% @bands.each do |b| %>
     <h1><%=b.band_name %></h1>
     <p><%=b.city %>, <%=b.state %></p>

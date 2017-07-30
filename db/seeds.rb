@@ -7,6 +7,17 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 DatabaseCleaner.clean_with(:truncation)
 
+instruments = Instrument.create([
+		{name: 'Guitar'},
+		{name: 'Bass'},
+    {name: 'Drums'},
+		{name: 'Keyboards'},
+    {name: 'Synthesizers'},
+    {name: 'Vocals'},
+    {name: 'Lead Vocals'},
+
+                                ])
+
 band1 = Band.create(band_name: 'Falsetta', city: 'Austin', state: 'TX', start_date: Date.new(2008,2,1))
 band2 = Band.create(band_name: 'Berried Alive', city: 'Twin Cities', state: 'MN', start_date: Date.new(2010,4,1))
 band3 = Band.create(band_name: 'Animals As Leaders', city: 'Washington', state: 'DC', start_date: Date.new(2007,5,1))
@@ -45,34 +56,36 @@ band5.albums.create([
     {title: 'Ultu Ulla', release_date: Date.new(2017,7,28), album_type: 'LP'}
 ])
 
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
-# Musician.create(first_name: '', twitter_name: '')
+band1.musicians.create([
+		                       {first_name: 'Joseph', last_name: 'Tongay', instrument_ids: [instruments[0].id]},
+		                       {first_name: 'Angel', last_name: 'Compean', instrument_ids: [instruments[1].id]},
+		                       {first_name: 'Scooter', last_name: 'Beatz', instrument_ids: [instruments[0].id]},
+		                       {first_name: 'Jarrett', last_name: 'Austin', instrument_ids: [instruments[2].id]},
+		                       {first_name: 'Stephen', last_name: 'Colgan', instrument_ids: [instruments[6].id]}
+                       ])
+
+
+band2.musicians.create(first_name: 'Charles', last_name: 'Caswell', instrument_ids: [instruments[0].id, instruments[6].id])
+
+band3.musicians.create([
+		{first_name: 'Tosin', last_name: 'Abasi'},
+		{first_name: 'Javier', last_name: 'Reyes'},
+		{first_name: 'Matt', last_name: 'Garstka'}
+                       ])
+
+band4.musicians.create([
+		{first_name: 'Misha', last_name: 'Mansoor'},
+    {first_name: 'Jake', last_name: 'Bowen'},
+    {first_name: 'Adam (Nolly)', last_name: 'Getgood'},
+    {first_name: 'Matt', last_name: 'Halpern'},
+    {first_name: 'Spencer', last_name: 'Sotelo'},
+    {first_name: 'Mark', last_name: 'Holcomb'}
+                       ])
+
+band5.musicians.create([
+    {first_name: 'Joe', last_name: 'Buras'},
+    {first_name: 'Ronnie', last_name: 'Canizaro'},
+    {first_name: 'Cameron', last_name: 'Losch'},
+    {first_name: 'David', last_name: 'Da Rocha'},
+    {first_name: 'Lee', last_name: 'McKinney'}
+                      ])
