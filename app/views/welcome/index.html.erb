@@ -6,14 +6,14 @@
 <div class="container">
   <div class="row">
     <div class="col-md-6 text-center">
-      <p>Current Roster</p>
+      <h2>Current Roster</h2>
      <% @bands.each do |b| %>
-        <h1><%=b.band_name %></h1>
+        <h1><%= link_to b.band_name, band_path(b.id) %></h1>
         <p><%=b.city %>, <%=b.state %></p>
       <% end %>
     </div>
     <div class="col-md-6 text-center">
-      <p>Recent and Upcoming Releases</p>
+      <h2>Recent and Upcoming Releases</h2>
       <% @ordered_albums.each do |b| %>
         <p><%=	b.title  %>, <%=	b.release_date.to_formatted_s(:long_ordinal)  %>, <%= b.bands[0].band_name %></p>
       <% end %>
