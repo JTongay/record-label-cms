@@ -7,4 +7,19 @@ class AlbumsController < ApplicationController
     end
     puts @bands
   end
+
+  def index
+    @albums = Album.order('release_date DESC')
+  end
+
+  def create
+
+  end
+
+  private
+
+  def album_params
+
+  end
+
 end
