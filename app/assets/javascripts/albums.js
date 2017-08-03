@@ -3,14 +3,14 @@
 
 $(document).ready(function(){
 
-
-    $('#select-band').on('click', function(){
-     console.log($(this))
-    })
-
     $('h1').on('click', function(){
      console.log($(this).text())
+    });
+
+    $('#add-song').on('click', function(ev){
+        ev.preventDefault();
+        $('.song-title-input').first().clone().appendTo('#song-title-section')
     })
 
-})
+});
 
