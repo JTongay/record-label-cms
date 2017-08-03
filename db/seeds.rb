@@ -18,18 +18,18 @@ instruments = Instrument.create([
 
                                 ])
 
-band1 = Band.create(band_name: 'Falsetta', city: 'Austin', state: 'TX', start_date: Date.new(2008,2,1))
-band2 = Band.create(band_name: 'Berried Alive', city: 'Twin Cities', state: 'MN', start_date: Date.new(2010,4,1))
-band3 = Band.create(band_name: 'Animals As Leaders', city: 'Washington', state: 'DC', start_date: Date.new(2007,5,1))
-band4 = Band.create(band_name: 'Periphery', city: 'Washington', state: 'DC', start_date: Date.new(2005,3,1))
-band5 = Band.create(band_name: 'Rings of Saturn', city: 'Bay Area', state: 'CA', start_date: Date.new(2009,10,1))
+band1 = Band.create(band_name: 'Falsetta', city: 'Austin', state: 'TX', start_date: Date.new(2008, 2, 1), bio: 'Heres a fucking bio')
+band2 = Band.create(band_name: 'Berried Alive', city: 'Twin Cities', state: 'MN', start_date: Date.new(2010,4,1), bio: 'Heres a fucking bio about Berried Alive')
+band3 = Band.create(band_name: 'Animals As Leaders', city: 'Washington', state: 'DC', start_date: Date.new(2007,5,1), bio: 'Heres a fucking bio about Animals as Leaders')
+band4 = Band.create(band_name: 'Periphery', city: 'Washington', state: 'DC', start_date: Date.new(2005,3,1), bio: 'Heres a fucking bio about Rings of Saturn')
+band5 = Band.create(band_name: 'Rings of Saturn', city: 'Bay Area', state: 'CA', start_date: Date.new(2009,10,1), bio: 'Heres a fucking bio about Born of Osiris')
 
 band1.albums.create(title: 'Sleep is for Babies', release_date: Date.new(2009,6,14), album_type: 'EP')
 band1.albums.create(title: 'Blood Beard', release_date: Date.new(2010,2,1), album_type: 'LP')
 
 band2.albums.create([
-    {title: 'Soul Sucker', release_date: Date.new(2016,8,5), album_type: 'LP'},
-    {title: 'Fools Gold', release_date: Date.new(2017,9,1), album_type: 'LP'}
+    { title: 'Soul Sucker', release_date: Date.new(2016, 8, 5), album_type: 'LP' },
+    { title: 'Fools Gold', release_date: Date.new(2017, 9, 1), album_type: 'LP' }
 ])
 
 band3.albums.create([

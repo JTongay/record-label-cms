@@ -7,6 +7,8 @@ $(document).ready(function(){
      console.log($(this).text())
     });
 
+
+    //Come back to this. Add an input for adding a song.
     $('#add-song').on('click', function(ev){
         ev.preventDefault();
         $('.song-title-input').first().clone().appendTo('#song-title-section')

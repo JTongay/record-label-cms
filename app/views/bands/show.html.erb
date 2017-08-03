@@ -1,3 +1,8 @@
-<h1>Single Band Page</h1>
+<div class="band-profile">
+  <h1><%= @band.band_name %></h1>
+  <%=	image_tag('http://shop.wwe.com/on/demandware.static/-/Sites/default/dwd8f17634/images/slot/landing/superstar-landing/Superstar-Category_Superstar_562x408_stoneCold.png', class: 'stock-photo')  %>
+  <p>From: <%= @band.city %>, <%= @band.state %></p>
+  <p>Formed on: <%=	@band.start_date.to_formatted_s(:long_ordinal) %></p>
+  <p>Bio: <%= @band.bio %></p>
+</div>
 
-<h1><%= @band.band_name %></h1>
