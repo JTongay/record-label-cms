@@ -6,3 +6,12 @@
   <p>Bio: <%= @band.bio %></p>
 </div>
 
+<div class="discography">
+  <% @albums.each do |a| %>
+    <p>
+      <span><%= a.title %></span>
+      <span><%= a.release_date.to_formatted_s(:long_ordinal) %></span>
+    </p>
+<% end %>
+</div>
+

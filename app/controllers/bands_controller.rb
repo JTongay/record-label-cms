@@ -6,6 +6,7 @@ class BandsController < ApplicationController
 
   def show
     @band = Band.find(params[:id])
+    @albums = Band.find(params[:id]).albums.order('release_date DESC')
   end
 
   def new
