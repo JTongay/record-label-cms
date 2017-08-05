@@ -4,12 +4,31 @@
 
 .single-band-section {
 
-  .stock-photo {
-    max-width: 200px;
+  .band-name{
+    text-align: center;
+    padding: 40px;
   }
 
-  .album-art {
-    max-width: 100px;
+  .band-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .stock-photo {
+      max-width: 200px;
+    }
   }
+
+  .discography {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .album-art {
+      max-width: 100px;
+    }
+  }
+
+
 
 }
