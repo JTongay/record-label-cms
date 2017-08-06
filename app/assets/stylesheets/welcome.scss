@@ -12,23 +12,28 @@
     .stylish-background {
       width: 100%;
       object-fit: fill;
+      position: relative;
+    }
+    .logo-container {
+      position: absolute;
+      top: 200px;
+      right: 180px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: row-reverse;
+      .logo {
+        max-width: 100px;
+        max-height: 100px;
+      }
+
+      .logo-container-items {
+        align-self: center;
+      }
     }
   }
 
-  .logo-container {
-    padding: 60px;
-    display: flex;
-    justify-content: center;
-    flex-direction: row-reverse;
-    .logo {
-      max-width: 100px;
-      max-height: 100px;
-    }
 
-    .logo-container-items {
-      align-self: center;
-    }
-  }
 }
 
 
