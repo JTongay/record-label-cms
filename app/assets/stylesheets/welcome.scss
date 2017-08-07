@@ -30,7 +30,26 @@
       .logo-container-items {
         align-self: center;
       }
+
+      .links {
+        align-self: column;
+      }
+
+      .label-name {
+        color: ghostwhite;
+      }
+
     }
+  }
+
+  .about-us {
+    background-color: steelblue;
+    padding-top: 125px;
+
+    .about-us-content {
+      background-color: ghostwhite;
+    }
+
   }
 
 
