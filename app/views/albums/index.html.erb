@@ -1,1 +1,18 @@
-<h1>All Albums</h1>
+<section class="all-albums-section">
+  <h1 class="albums-title">All Albums</h1>
+  <div class="container-fluid">
+    <div class="row">
+        <% @albums.in_groups_of(2, false).each do |album| %>
+         <div class="col-md-6">
+           <% album.each do |a| %>
+            <div class="album-info-container">
+              <%= image_tag('https://lh6.ggpht.com/l3wjJ1leMIC24A5Begzi-Xe-hyB-1dPjFHEpUeJtLMHaWP_StxVuEvM1_vsN-DzTu1Y=w300') %>
+              <p class="album-info"><%=a.title %>, <%=a.album_type %></p>
+              <p class="album-info"><%=a.release_date.to_formatted_s(:long_ordinal) %></p>
+            </div>
+           <% end %>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</section>

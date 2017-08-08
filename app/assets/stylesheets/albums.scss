@@ -1,3 +1,23 @@
 // Place all the styles related to the albums controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.all-albums-section {
+  padding-top: 30px;
+
+  .albums-title {
+    padding: 40px;
+    text-align: center;
+  }
+
+  .album-info-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    .album-info {
+      text-align: center;
+    }
+  }
+
+
+}
