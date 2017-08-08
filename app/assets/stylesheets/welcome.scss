@@ -17,11 +17,16 @@
     .logo-container {
       position: absolute;
       top: 200px;
-      right: 180px;
-      width: 100%;
+      left: 40px;
+      padding: 30px;
+      width: auto;
+      color: white;
+      text-align: center;
       display: flex;
-      justify-content: center;
+      flex-wrap: wrap;
+      justify-content: flex-start;
       flex-direction: row-reverse;
+      align-items: flex-start;
       .logo {
         max-width: 100px;
         max-height: 100px;
@@ -30,9 +35,17 @@
       .logo-container-items {
         align-self: center;
       }
-
-      .links {
-        align-self: column;
+      .links-container {
+        position: absolute;
+        top: 150px;
+        width: 150px;
+        left: 175px;
+        display: flex;
+        .links {
+          align-self: baseline;
+          line-height: 2px;
+          padding: 6px;
+        }
       }
 
       .label-name {
@@ -40,6 +53,7 @@
       }
 
     }
+
   }
 
   .about-us {
