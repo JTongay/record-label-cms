@@ -14,27 +14,36 @@
       object-fit: fill;
       position: relative;
     }
-    .logo-container {
+
+    .main-container {
       position: absolute;
       top: 200px;
       left: 40px;
       padding: 30px;
       width: auto;
-      color: white;
-      text-align: center;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      flex-direction: row-reverse;
-      align-items: flex-start;
-      .logo {
-        max-width: 100px;
-        max-height: 100px;
+      .logo-container {
+        color: white;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        .logo {
+          max-width: 100px;
+          max-height: 100px;
+        }
+
+        .logo-container-items {
+          align-self: center;
+        }
+
+        .label-name {
+          color: ghostwhite;
+        }
+
       }
 
-      .logo-container-items {
-        align-self: center;
-      }
       .links-container {
         position: absolute;
         top: 150px;
@@ -47,12 +56,9 @@
           padding: 6px;
         }
       }
-
-      .label-name {
-        color: ghostwhite;
-      }
-
     }
+
+
 
   }
 
