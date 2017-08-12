@@ -6,5 +6,16 @@
       <secret-storage>master_key</secret-storage>
       <first-sync>true</first-sync>
     </data-source>
+    <data-source name="Rails band-cms: development" uuid="966c7716-4353-47db-b7fd-872efae9b5aa">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+    </data-source>
+    <data-source name="Rails band-cms: production" uuid="d7a1715b-1283-4753-b4fc-fbc98c91c27d">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <user-name>band-cms</user-name>
+    </data-source>
+    <data-source name="Rails band-cms: test" uuid="6af37b0f-3cf1-4bde-acc1-39c3b8e93a07">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+    </data-source>
   </component>
 </project>
