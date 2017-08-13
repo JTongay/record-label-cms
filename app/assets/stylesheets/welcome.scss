@@ -67,10 +67,43 @@ $topPadding: 50px;
     .about-us-content {
       text-align: center;
     }
+
+    .reviews-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-flow: row wrap;
+
+      .review {
+        flex: 1;
+        padding: 20px;
+        max-width: 75px;
+      }
+    }
+
+
   }
 
   .roster-and-albums {
+    padding-top: $topPadding;
+    height: 600px;
+    .roster-and-albums-content {
 
+      .roster {
+        height: 380px;
+        .roster-list {
+          height: 370px;
+          overflow: auto;
+        }
+      }
+      .new-releases {
+        height: 380px;
+        .new-releases-list {
+          height: 370px;
+          overflow: auto;
+        }
+      }
+    }
 
   }
 
