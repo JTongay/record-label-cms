@@ -1,12 +1,15 @@
-<h1>Add Album</h1>
+<section class="new-album-section">
+  <h1>Add Album</h1>
 
-<%=	simple_form_for @album do |f|  %>
-  <%=	f.input :band_ids, collection: @bands, label: 'Select Band', input_html: { id: 'select-band' }  %>
-  <%=	f.input :title, label: 'Album Title' %>
-  <%= f.input :release_date, label: 'Release Date', as: :date, start_year: Date.today.year - 10,
-      end_year: Date.today.year + 4 %>
-    <%= f.fields_for :songs do |f| %>
-      <%=	f.input :title, label: 'Song Title', wrapper_html: { id: 'song-title-section' }, input_html: { class: 'song-title-input' } %>
-      <%=	f.button :button, 'Add Song', id: 'add-song' %>
-    <% end %>
-<% end %>
+  <%=	simple_form_for @album do |f|  %>
+      <%=	f.input :band_ids, collection: @bands, label: 'Select Band', input_html: { id: 'select-band' }  %>
+      <%=	f.input :title, label: 'Album Title' %>
+      <%= f.input :release_date, label: 'Release Date', as: :date, start_year: Date.today.year - 10,
+                  end_year: Date.today.year + 4 %>
+      <%= f.fields_for :songs do |f| %>
+          <%=	f.input :title, label: 'Song Title', wrapper_html: { id: 'song-title-section' }, input_html: { class: 'song-title-input' } %>
+          <%=	f.button :button, 'Add Song', id: 'add-song' %>
+      <% end %>
+  <% end %>
+
+</section>

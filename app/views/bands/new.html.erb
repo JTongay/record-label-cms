@@ -1,10 +1,13 @@
-<h1>New Band</h1>
-<%= simple_form_for @band do |f| %>
-  <%= f.input :band_name, label: 'Band\'s name' %>
-  <%= f.input :city %>
-  <%= f.input :state , collection: Band::us_states, value_method: Band.us_states[1[1]] %>
-  <%= f.input :start_date, label: 'Start Date', as: :date, start_year: Date.today.year,
-              end_year: Date.today.year - 20, discard_day: true,
-              order: [:month, :year] %>
-  <%= f.submit 'Create Band', class: 'btn btn-primary' %>
-<% end %>
+<section class="new-band-section">
+  <h1>New Band</h1>
+  <%= simple_form_for @band do |f| %>
+      <%= f.input :band_name, label: 'Band\'s name' %>
+      <%= f.input :avatar, as: :file %>
+      <%= f.input :city %>
+      <%= f.input :state , collection: Band::us_states, value_method: Band.us_states[1[1]] %>
+      <%= f.input :start_date, label: 'Start Date', as: :date, start_year: Date.today.year,
+                  end_year: Date.today.year - 20, discard_day: true,
+                  order: [:month, :year] %>
+      <%= f.submit 'Create Band', class: 'btn btn-primary' %>
+  <% end %>
+</section>
