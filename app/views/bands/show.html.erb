@@ -5,7 +5,11 @@
     <div class="row">
       <div class="band-profile col-md-6">
         <h3>About <%= @band.band_name %></h3>
+        <% if @band.avatar? %>
         <%= image_tag @band.avatar.url %>
+        <% else %>
+        <%=	image_tag('http://www.onlineworldofwrestling.com/wp-content/uploads/2012/06/stone_cold_steve_austin_01.png', class: 'stock-photo')  %>
+        <% end %>
         <p>From: <%= @band.city %>, <%= @band.state %></p>
         <p>Formed on: <%=	@band.start_date.to_formatted_s(:long_ordinal) %></p>
         <p>Bio: <%= @band.bio %></p>
