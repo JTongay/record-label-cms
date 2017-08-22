@@ -111,6 +111,10 @@ $topPadding: 50px;
   .news {
     background-color: cadetblue;
     padding-top: $topPadding;
+    display: flex;
+    .news-content {
+      //min-height: 400px;
+    }
   }
 
 
