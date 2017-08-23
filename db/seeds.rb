@@ -8,13 +8,13 @@
 DatabaseCleaner.clean_with(:truncation)
 
 instruments = Instrument.create([
-		{name: 'Guitar'},
-		{name: 'Bass'},
-    {name: 'Drums'},
-		{name: 'Keyboards'},
-    {name: 'Synthesizers'},
-    {name: 'Vocals'},
-    {name: 'Lead Vocals'},
+		                                {name: 'Guitar'},
+		                                {name: 'Bass'},
+		                                {name: 'Drums'},
+		                                {name: 'Keyboards'},
+		                                {name: 'Synthesizers'},
+		                                {name: 'Vocals'},
+		                                {name: 'Lead Vocals'},
 
                                 ])
 
@@ -28,33 +28,33 @@ band1.albums.create(title: 'Sleep is for Babies', release_date: Date.new(2009,6,
 band1.albums.create(title: 'Blood Beard', release_date: Date.new(2010,2,1), album_type: 'LP')
 
 band2.albums.create([
-    { title: 'Soul Sucker', release_date: Date.new(2016, 8, 5), album_type: 'LP' },
-    { title: 'Fools Gold', release_date: Date.new(2017, 9, 1), album_type: 'LP' }
-])
+		                    { title: 'Soul Sucker', release_date: Date.new(2016, 8, 5), album_type: 'LP' },
+		                    { title: 'Fools Gold', release_date: Date.new(2017, 9, 1), album_type: 'LP' }
+                    ])
 
 band3.albums.create([
-    {title: 'Animals as Leaders', release_date: Date.new(2009,4,28), album_type: 'LP'},
-    {title: 'Weightless', release_date: Date.new(2011,11,4), album_type: 'LP'},
-    {title: 'The Joy of Motion', release_date: Date.new(2014,3,24), album_type: 'LP'},
-    {title: 'The Madness of Many', release_date: Date.new(2016,11,11), album_type: 'LP'}
-])
+		                    {title: 'Animals as Leaders', release_date: Date.new(2009,4,28), album_type: 'LP'},
+		                    {title: 'Weightless', release_date: Date.new(2011,11,4), album_type: 'LP'},
+		                    {title: 'The Joy of Motion', release_date: Date.new(2014,3,24), album_type: 'LP'},
+		                    {title: 'The Madness of Many', release_date: Date.new(2016,11,11), album_type: 'LP'}
+                    ])
 
 band4.albums.create([
-    {title: 'Periphery', release_date: Date.new(2010,4,20), album_type: 'LP'},
-    {title: 'Icarus', release_date: Date.new(2011,4,19), album_type: 'EP'},
-    {title: 'Periphery II: This Time It\'s Personal', release_date: Date.new(2012,7,3), album_type: 'LP'},
-    {title: 'Clear', release_date: Date.new(2014,1,28), album_type: 'EP'},
-    {title: 'Juggernaut: Alpha', release_date: Date.new(2015,1,27), album_type: 'LP'},
-    {title: 'Juggernaut: Omega', release_date: Date.new(2015,1,27), album_type: 'LP'},
-    {title: 'Periphery III: Select Difficulty', release_date: Date.new(2016,7,22), album_type: 'LP'}
-])
+		                    {title: 'Periphery', release_date: Date.new(2010,4,20), album_type: 'LP'},
+		                    {title: 'Icarus', release_date: Date.new(2011,4,19), album_type: 'EP'},
+		                    {title: 'Periphery II: This Time It\'s Personal', release_date: Date.new(2012,7,3), album_type: 'LP'},
+		                    {title: 'Clear', release_date: Date.new(2014,1,28), album_type: 'EP'},
+		                    {title: 'Juggernaut: Alpha', release_date: Date.new(2015,1,27), album_type: 'LP'},
+		                    {title: 'Juggernaut: Omega', release_date: Date.new(2015,1,27), album_type: 'LP'},
+		                    {title: 'Periphery III: Select Difficulty', release_date: Date.new(2016,7,22), album_type: 'LP'}
+                    ])
 
 band5.albums.create([
-    {title: 'Embryonic Anomaly', release_date: Date.new(2010,5,15), album_type: 'LP'},
-    {title: 'Dingir', release_date: Date.new(2013,2,5), album_type: 'LP'},
-    {title: 'Lugal Ki En', release_date: Date.new(2014,10,14), album_type: 'LP'},
-    {title: 'Ultu Ulla', release_date: Date.new(2017,7,28), album_type: 'LP'}
-])
+		                    {title: 'Embryonic Anomaly', release_date: Date.new(2010,5,15), album_type: 'LP'},
+		                    {title: 'Dingir', release_date: Date.new(2013,2,5), album_type: 'LP'},
+		                    {title: 'Lugal Ki En', release_date: Date.new(2014,10,14), album_type: 'LP'},
+		                    {title: 'Ultu Ulla', release_date: Date.new(2017,7,28), album_type: 'LP'}
+                    ])
 
 band1.musicians.create([
 		                       {first_name: 'Joseph', last_name: 'Tongay', instrument_ids: [instruments[0].id]},
@@ -68,24 +68,24 @@ band1.musicians.create([
 band2.musicians.create(first_name: 'Charles', last_name: 'Caswell', instrument_ids: [instruments[0].id, instruments[6].id])
 
 band3.musicians.create([
-		{first_name: 'Tosin', last_name: 'Abasi'},
-		{first_name: 'Javier', last_name: 'Reyes'},
-		{first_name: 'Matt', last_name: 'Garstka'}
+		                       {first_name: 'Tosin', last_name: 'Abasi'},
+		                       {first_name: 'Javier', last_name: 'Reyes'},
+		                       {first_name: 'Matt', last_name: 'Garstka'}
                        ])
 
 band4.musicians.create([
-		{first_name: 'Misha', last_name: 'Mansoor'},
-    {first_name: 'Jake', last_name: 'Bowen'},
-    {first_name: 'Adam (Nolly)', last_name: 'Getgood'},
-    {first_name: 'Matt', last_name: 'Halpern'},
-    {first_name: 'Spencer', last_name: 'Sotelo'},
-    {first_name: 'Mark', last_name: 'Holcomb'}
+		                       {first_name: 'Misha', last_name: 'Mansoor'},
+		                       {first_name: 'Jake', last_name: 'Bowen'},
+		                       {first_name: 'Adam (Nolly)', last_name: 'Getgood'},
+		                       {first_name: 'Matt', last_name: 'Halpern'},
+		                       {first_name: 'Spencer', last_name: 'Sotelo'},
+		                       {first_name: 'Mark', last_name: 'Holcomb'}
                        ])
 
 band5.musicians.create([
-    {first_name: 'Joe', last_name: 'Buras'},
-    {first_name: 'Ronnie', last_name: 'Canizaro'},
-    {first_name: 'Cameron', last_name: 'Losch'},
-    {first_name: 'David', last_name: 'Da Rocha'},
-    {first_name: 'Lee', last_name: 'McKinney'}
-                      ])
+		                       {first_name: 'Joe', last_name: 'Buras'},
+		                       {first_name: 'Ronnie', last_name: 'Canizaro'},
+		                       {first_name: 'Cameron', last_name: 'Losch'},
+		                       {first_name: 'David', last_name: 'Da Rocha'},
+		                       {first_name: 'Lee', last_name: 'McKinney'}
+                       ])

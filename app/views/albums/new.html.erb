@@ -6,10 +6,11 @@
       <%=	f.input :title, label: 'Album Title' %>
       <%= f.input :release_date, label: 'Release Date', as: :date, start_year: Date.today.year - 10,
                   end_year: Date.today.year + 4 %>
-      <%= f.fields_for :songs do |f| %>
+      <%= f.fields_for :song do |f| %>
           <%=	f.input :title, label: 'Song Title', wrapper_html: { id: 'song-title-section' }, input_html: { class: 'song-title-input' } %>
           <%=	f.button :button, 'Add Song', id: 'add-song' %>
       <% end %>
+      <%= f.button :submit %>
   <% end %>
 
 </section>
