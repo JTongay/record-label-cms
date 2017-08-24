@@ -1,4 +1,4 @@
-<section class="welcome-section">
+<section class="container-fluid welcome-section">
 
   <div class="splash">
      <%=	image_tag 'stylish-background.jpg', class: 'stylish-background'  %>
@@ -30,9 +30,9 @@
   </div>
 
 
-  <div class="roster-and-albums">
+  <div class="container roster-and-albums">
    <div class="row roster-and-albums-content">
-     <div class="col-md-6 text-center roster">
+     <div class="col-md-6 col-sm-12 col-xs-12 text-center roster">
        <h2>Current Roster</h2>
        <div class="roster-list">
         <% @bands.each do |b| %>
@@ -41,7 +41,7 @@
         <% end %>
        </div>
       </div>
-      <div class="col-md-6 text-center new-releases">
+      <div class="col-md-6 col-sm-12 col-xs-12 text-center new-releases">
         <h2>Recent and Upcoming Releases</h2>
         <div class="new-releases-list">
         <% @ordered_albums.each do |b| %>
@@ -54,11 +54,11 @@
 
   <div class="container news">
     <div class="row news-content">
-      <div class="col-md-6">
+      <div class="col-md-6 col-sm-12 col-xs-12">
         <h2>News and Updates</h2>
         <p>Here's where the fucking news and updates are gonna be</p>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 col-sm-12 col-xs-12">
         <h2>Upcoming Tours</h2>
         <p>Eventually I'll have some stupid tours here</p>
       </div>

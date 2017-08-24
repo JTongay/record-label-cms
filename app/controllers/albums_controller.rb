@@ -12,11 +12,10 @@ class AlbumsController < ApplicationController
   end
 
   def create
-    @album = Album.new(album_params).songs.new(songs_params)
+    @album = Album.new(album_params)
     # @album = Band.find(band_params).albums.new(album_params)
     puts @album
     puts album_params
-    puts song_params
     if @album.save
       redirect_to root_url, notice: "#{@album.title} was created"
     end
@@ -25,11 +24,7 @@ class AlbumsController < ApplicationController
   private
 
   def album_params
-    params.require(:album).permit(:band_ids, :title, :release_date)
-  end
-
-  def songs_params
-    params.require(:song).permit(:title)
+    params.require(:album).permit(:band_ids, :title, :release_date, songs_attributes: [ :title ])
   end
 
 end

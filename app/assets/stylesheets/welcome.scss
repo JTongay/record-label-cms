@@ -88,7 +88,6 @@ $topPadding: 50px;
     padding-top: $topPadding;
     height: 600px;
     .roster-and-albums-content {
-
       .roster {
         height: 380px;
         .roster-list {
@@ -97,7 +96,10 @@ $topPadding: 50px;
         }
       }
       .new-releases {
-        height: 380px;
+        // height: 380px;
+        @media(min-width: 992px){
+          padding: 30px;
+        }
         .new-releases-list {
           height: 370px;
           overflow: auto;
@@ -112,6 +114,7 @@ $topPadding: 50px;
     background-color: cadetblue;
     padding-top: $topPadding;
     display: flex;
+    position: inherit;
     .news-content {
       //min-height: 400px;
     }
