@@ -88,21 +88,19 @@ $topPadding: 50px;
     padding-top: $topPadding;
     height: 600px;
     .roster-and-albums-content {
+
       .roster {
-        height: 380px;
+
         .roster-list {
           height: 370px;
-          overflow: auto;
+          overflow: scroll;
         }
       }
       .new-releases {
-        // height: 380px;
-        @media(min-width: 992px){
-          padding: 30px;
-        }
+        
         .new-releases-list {
           height: 370px;
-          overflow: auto;
+          overflow: scroll;
         }
       }
     }
