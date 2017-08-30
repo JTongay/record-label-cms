@@ -13,6 +13,5 @@ $(document).ready(function(){
         ev.preventDefault();
         $('.song-title-input').first().clone().appendTo('#song-title-section')
     })
-
 });
 
