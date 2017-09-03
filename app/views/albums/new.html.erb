@@ -7,7 +7,7 @@
       <%= f.input :release_date, label: 'Release Date', as: :date, start_year: Date.today.year - 10,
                   end_year: Date.today.year + 4 %>
       <%= f.simple_fields_for :songs do |t| %>
-          <%=	t.input :title, label: 'Song Title', as: :array, multiple: true, wrapper_html: { id: 'song-title-section' }, input_html: { class: 'song-title-input' } %>
+          <%=	t.input :title, label: 'Song Title', multiple: true, wrapper_html: { id: 'song-title-section' }, input_html: { class: 'song-title-input' } %>
           <%=	t.button :button, 'Add Song', id: 'add-song' %>
       <% end %>
       <%= f.button :submit %>
