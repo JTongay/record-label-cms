@@ -1,0 +1,8 @@
+<section class="single-album-section">
+    <h1 class="album-title"><%= @album.title %></h1>
+    <ol>
+        <% @album.songs.each do |song| %>
+        <li><%= song.title %></li>
+        <% end %>
+    </ol>
+</section>

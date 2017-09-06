@@ -6,7 +6,7 @@
          <div class="col-md-4">
            <% album.each do |a| %>
             <div class="album-info-container">
-              <%= image_tag('https://lh6.ggpht.com/l3wjJ1leMIC24A5Begzi-Xe-hyB-1dPjFHEpUeJtLMHaWP_StxVuEvM1_vsN-DzTu1Y=w300') %>
+              <%= link_to image_tag('https://lh6.ggpht.com/l3wjJ1leMIC24A5Begzi-Xe-hyB-1dPjFHEpUeJtLMHaWP_StxVuEvM1_vsN-DzTu1Y=w300'), album_path(a.id) %>
               <p class="album-info"><%=a.title %>, <%=a.album_type %></p>
               <p class="album-info"><%=a.release_date.to_formatted_s(:long_ordinal) %></p>
             </div>

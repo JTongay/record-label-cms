@@ -6,6 +6,7 @@ class AlbumsController < ApplicationController
     Band.all.each do |b|
       @bands.push([b.band_name, b.id])
     end
+    @album_types = ['EP', 'LP', 'Single']
   end
 
   def index
@@ -21,10 +22,14 @@ class AlbumsController < ApplicationController
     end
   end
 
+  def show
+    @album = Album.find(params[:id])
+  end   
+
   private
 
   def album_params
-    params.require(:album).permit(:band_ids, :title, :release_date, :songs_attributes => [:title])
+    params.require(:album).permit(:band_ids, :title, :release_date, :album_type, :songs_attributes => [:title])
   end
 
 end

@@ -89,3 +89,89 @@ band5.musicians.create([
 		                       {first_name: 'David', last_name: 'Da Rocha'},
 		                       {first_name: 'Lee', last_name: 'McKinney'}
                        ])
+
+sleep_songs = [
+	{title: 'Wars Waged'},
+	{title: 'Getting all the Girls'},
+	{title: 'Sheamus'}
+]
+
+blood_songs = [
+	{title: 'Blood Beard'},
+	{title: 'Jazz Hands'},
+	{title: 'Untitled'},
+	{title: 'Trapt'},
+	{title: 'Someone Throw Me a Damn Beer'},
+	{title: 'It\'s Still Real To Me Dammit'},
+	{title: 'Stack Trace'},
+	{title: 'Chicken Salad'}
+]
+
+soul_sucker = [
+	{title: 'Alarm Clock From Hell'},
+	{title: 'Downsy'},
+	{title: 'Dark Corners'},
+	{title: 'Heartless'},
+	{title: 'Why Are You Still Alive? (feat. Andrew Patterson)'},
+	{title: 'Crusty'},
+	{title: 'Evil Thoughts'},
+	{title: 'Broken Hero'},
+	{title: 'Hump'}
+]
+
+fools_gold = [
+	{title: 'Prosthetic Progress'},
+	{title: 'No One Is Listening'},
+	{title: 'When Guidance Leaves'},
+	{title: 'Chewed Up And Spit Out'},
+	{title: 'Catalina Beach'},
+	{title: 'Fools Gold'},
+	{title: 'Shitler'},
+	{title: 'Salida'},
+	{title: 'Waiting For Us'}
+]
+
+animals_leaders = [
+	{title: 'Tempting Time'},
+	{title: 'Soraya'},
+	{title: 'Thoroughly At Home'},
+	{title: 'On Impulse'},
+	{title: 'Tessitura'},
+	{title: 'Behaving Badly'},
+	{title: 'The Price of Everything and the Value of Nothing'},
+	{title: 'CAFO'},
+	{title: 'Inamorata'},
+	{title: 'Point to Point'},
+	{title: 'Modern Meat'},
+	{title: 'Song of Solomon'}
+]
+
+weightless = [
+	{title: 'An Infinite Regression'},
+	{title: 'Odessa'},
+	{title: 'Somnarium'},
+	{title: 'Earth Departure'},
+	{title: 'Isolated Incidents'},
+	{title: 'Do Not Go Gently'},
+	{title: 'New Eden'},
+	{title: 'Cylindrical Sea'},
+	{title: 'Espera'},
+	{title: 'To Lead You to an Overwhelming Question'},
+	{title: 'Weightless'},
+	{title: 'David'}
+]
+
+joy_of_motion = [
+	{title: 'Ka$cade'},
+	{title: 'Lippincott'},
+	{title: 'Air Chrysalis'},
+	{title: 'Another Year'},
+	{title: 'Physical Education'},
+	{title: 'Tooth and Claw'},
+	{title: 'Crescent'},
+	{title: 'The Future That Awaited Me'},
+	{title: 'Para Mexer'},
+	{title: 'The Woven Web'},
+	{title: 'Mind Spun'},
+	{title: 'Nephele'}
+]
