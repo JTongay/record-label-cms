@@ -15,8 +15,6 @@ class AlbumsController < ApplicationController
 
   def create
     @album = Album.new(album_params)
-    puts @album
-    puts album_params
     if @album.save
       redirect_to root_url, notice: "#{@album.title} was created"
     end
@@ -29,7 +27,7 @@ class AlbumsController < ApplicationController
   private
 
   def album_params
-    params.require(:album).permit(:band_ids, :title, :release_date, :album_type, :songs_attributes => [:title])
+    params.require(:album).permit(:band_ids, :title, :release_date, :album_type, songs_attributes: [:title])
   end
 
 end
