@@ -43,13 +43,22 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0 85px;
     .band-container {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      padding-bottom: 15px;
       .band-photo {
         width: 400px;
         height: 300px;
+      }
+      .band-name-container {
+        padding: 20px;
+        background-color: lightgrey;
+        .band-name {
+         text-align: center;
+        }
       }
     }
   }

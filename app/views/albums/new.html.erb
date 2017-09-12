@@ -9,7 +9,7 @@
       <%= f.input :album_type, collection: @album_types, label: 'EP/LP/Single' %>                  
       <%= f.simple_fields_for :songs do |t| %>
           <%=	t.input :title, label: 'Song Title', multiple: true, wrapper_html: { id: 'song-title-section' }, input_html: { class: 'song-title-input' } %>
-          <input type="button" id="add-song" value="Add Song"></input>
+      <input type="button" id="add-song" value="Add Song"></input>
       <% end %>
       <%= f.submit 'Save'%>
   <% end %>
