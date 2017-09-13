@@ -2,12 +2,14 @@
   <h1>Our Artists</h1>
   <div class="band-list-container">
   <% @bands.each do |b| %>
+    <%= link_to(band_path(b.id)) do %>
     <div class="band-container">
       <%= image_tag('http://ima.ulximg.com/image/src/artist/1391012279_d428521060d785b162c08a607c6d937b.jpg/508a95e221b387af8689e1cfb31eeb3d/1391012279_limp_bizkit_50106dbb9da50_79.jpg', class: 'band-photo') %>
       <div class="band-name-container">
-        <p class="band-name"><%= link_to b.band_name, band_path(b.id)%></p>
+        <p class="band-name"><%= b.band_name %></p>
       </div>
     </div>
+    <% end %>
   <% end %>
   </div>
 </section>
