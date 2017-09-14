@@ -1,13 +1,23 @@
 <section class="new-band-section">
   <h1>New Band</h1>
-  <%= simple_form_for @band do |f| %>
-      <%= f.input :band_name, label: 'Band\'s name' %>
-      <%= f.input :avatar, as: :file %>
-      <%= f.input :city %>
-      <%= f.input :state , collection: Band::us_states, value_method: Band.us_states[1[1]] %>
-      <%= f.input :start_date, label: 'Start Date', as: :date, start_year: Date.today.year,
+  <div class="container-fluid new-band-form">
+    <div class="row">
+      <div class="col-md-6">
+         <%= simple_form_for @band do |f| %>
+          <%= f.input :band_name, label: 'Band\'s name', placeholder: 'Enter Band Name' %>
+          <%= f.input :avatar, as: :file %>
+          <%= f.input :city, placeholder: 'What City Are They From?' %>
+          <%= f.input :state , collection: Band::us_states, value_method: Band.us_states[1[1]] %>
+          <%= f.input :start_date, label: 'Start Date', as: :date, start_year: Date.today.year,
                   end_year: Date.today.year - 20, discard_day: true,
                   order: [:month, :year] %>
-      <%= f.submit 'Create Band', class: 'btn btn-primary' %>
-  <% end %>
+          <%= f.submit 'Create Band', class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+      <div class="col-md-6">
+        <h1>Suck a Dick</h1>
+        <%= image_tag 'random_logo.png', class: "logo logo-container-items" %>
+      </div>
+    </div>
+  </div>
 </section>
