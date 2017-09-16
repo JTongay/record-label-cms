@@ -19,12 +19,12 @@
       <h1>We're a fake record label stupids</h1>
       <p>Not only do we do record label stuff, we do record label stuff</p>
       <div class="reviews-container">
-        <p class="review">Here's a review</p>
-        <p class="review">Here's a review</p>
-        <p class="review">Here's a review</p>
-        <p class="review">Here's a review</p>
-        <p class="review">Here's a review</p>
-        <p class="review">Here's a review</p>
+        <p class="review">Spicy jalapeno bacon ipsum dolor amet t-bone shank spare ribs chicken ball tip kevin shankle capicola swine sirloin tail meatball tongue chuck. Tongue beef salami porchetta, burgdoggen flank pig pastrami cow picanha chicken meatball ham hock. Pork loin sirloin turducken tri-tip ham capicola. Chicken hamburger kielbasa pork chop burgdoggen chuck pig ribeye sirloin spare ribs fatback ham hock pork loin tail picanha.</p>
+        <p class="review">Spicy jalapeno bacon ipsum dolor amet t-bone shank spare ribs chicken ball tip kevin shankle capicola swine sirloin tail meatball tongue chuck. Tongue beef salami porchetta, burgdoggen flank pig pastrami cow picanha chicken meatball ham hock. Pork loin sirloin turducken tri-tip ham capicola. Chicken hamburger kielbasa pork chop burgdoggen chuck pig ribeye sirloin spare ribs fatback ham hock pork loin tail picanha.</p>
+        <p class="review">Spicy jalapeno bacon ipsum dolor amet t-bone shank spare ribs chicken ball tip kevin shankle capicola swine sirloin tail meatball tongue chuck. Tongue beef salami porchetta, burgdoggen flank pig pastrami cow picanha chicken meatball ham hock. Pork loin sirloin turducken tri-tip ham capicola. Chicken hamburger kielbasa pork chop burgdoggen chuck pig ribeye sirloin spare ribs fatback ham hock pork loin tail picanha.</p>
+        <p class="review">Spicy jalapeno bacon ipsum dolor amet t-bone shank spare ribs chicken ball tip kevin shankle capicola swine sirloin tail meatball tongue chuck. Tongue beef salami porchetta, burgdoggen flank pig pastrami cow picanha chicken meatball ham hock. Pork loin sirloin turducken tri-tip ham capicola. Chicken hamburger kielbasa pork chop burgdoggen chuck pig ribeye sirloin spare ribs fatback ham hock pork loin tail picanha.</p>
+        <p class="review">Spicy jalapeno bacon ipsum dolor amet t-bone shank spare ribs chicken ball tip kevin shankle capicola swine sirloin tail meatball tongue chuck. Tongue beef salami porchetta, burgdoggen flank pig pastrami cow picanha chicken meatball ham hock. Pork loin sirloin turducken tri-tip ham capicola. Chicken hamburger kielbasa pork chop burgdoggen chuck pig ribeye sirloin spare ribs fatback ham hock pork loin tail picanha.</p>
+        <p class="review">Spicy jalapeno bacon ipsum dolor amet t-bone shank spare ribs chicken ball tip kevin shankle capicola swine sirloin tail meatball tongue chuck. Tongue beef salami porchetta, burgdoggen flank pig pastrami cow picanha chicken meatball ham hock. Pork loin sirloin turducken tri-tip ham capicola. Chicken hamburger kielbasa pork chop burgdoggen chuck pig ribeye sirloin spare ribs fatback ham hock pork loin tail picanha.</p>
       </div>
     </div>
   </div>
@@ -45,7 +45,12 @@
         <h2>Recent and Upcoming Releases</h2>
         <div class="new-releases-list">
         <% @ordered_albums.each do |b| %>
-          <p><%=	b.title  %>, <%=	b.release_date.to_formatted_s(:long_ordinal)  %>, <%= b.bands[0].band_name %></p>
+          <% if b.avatar? %>
+            <%= image_tag b.avatar.thumb, class: 'welcom-album-art' %>
+          <% else %>
+           <%=	image_tag('http://www.onlineworldofwrestling.com/wp-content/uploads/2012/06/stone_cold_steve_austin_01.png', class: 'welcom-album-art')  %>
+          <% end %>         
+           <p><%=	b.title  %>, <%=	b.release_date.to_formatted_s(:long_ordinal)  %>, <%= b.bands[0].band_name %></p>
         <% end %>
         </div>
       </div>
