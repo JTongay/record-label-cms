@@ -38,21 +38,13 @@
     padding-top: 50px;
     text-align: center;
   }
-  .band-list-container {
-    // display: flex;
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // justify-content: flex-start;
-    // margin: 0 85px;
-    .band-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 30px;
-      // width: 0 auto;
-
-      padding-bottom: 15px;
-      .band-photo {
+  .band-container {
+     display: flex;
+     align-items: center;
+     justify-content: flex-start;
+     flex-direction: column;
+     padding-bottom: 15px;
+     .band-photo {
         // height: 300px;
         // object-fit: fill;
         // width: auto;
@@ -65,7 +57,6 @@
         }
       }
     }
-  }
 
 }
 

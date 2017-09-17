@@ -1,24 +1,24 @@
 <section class="all-bands-section">
   <h1>Our Artists</h1>
-  <div class="band-list-container container">
+  <div class="container-fluid">
+   <% @bands.in_groups_of(3, false).each do |band| %>
     <div class="row">
-      <% @bands.in_groups_of(3, false).each do |band| %>
-      <div class="col-md-4">
         <% band.each do |b| %>
-        <%= link_to(band_path(b.id)) do %>
+          <div class="col-md-4 col-lg-4">
           <div class="band-container">
+            <%= link_to(band_path(b.id)) do %>
             <%= image_tag('http://ima.ulximg.com/image/src/artist/1391012279_d428521060d785b162c08a607c6d937b.jpg/508a95e221b387af8689e1cfb31eeb3d/1391012279_limp_bizkit_50106dbb9da50_79.jpg', class: 'band-photo img-responsive') %>
             <div class="band-name-container">
               <p class="band-name">
                 <%= b.band_name %>
               </p>
             </div>
+            <% end %>
+            </div>
           </div>
         <% end %>
-        <% end %>
-      </div>
+        </div>
       <% end %>
-    </div>
   </div>
 </section>
 
