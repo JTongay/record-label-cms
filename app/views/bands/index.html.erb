@@ -1,6 +1,9 @@
 <section class="all-bands-section">
-  <h1>Our Artists</h1>
-  <div class="container-fluid">
+  <div class="logo-container">
+    <h1 class="logo-container-items label-name">The Roster</h1>
+    <%= image_tag 'random_logo.png', class: "logo logo-container-items" %>
+  </div>
+  <div class="container">
    <% @bands.in_groups_of(3, false).each do |band| %>
     <div class="row">
         <% band.each do |b| %>

@@ -36,7 +36,7 @@
         <!-- /.container-fluid -->
       </nav>
         <% if flash[:notice] %>
-        <div class="alert alert-info">
+        <div class="alert alert-info" style="z-index: 10;position: relative; top: 50px;">
         <%= flash[:notice] %>
         </div>
         <% end %>

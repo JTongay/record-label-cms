@@ -34,9 +34,22 @@
 
 .all-bands-section {
   padding-top: 50px;
-  h1 {
-    padding-top: 50px;
+  background-color: whitesmoke;
+  .logo-container {
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    padding: 20px;
+    .logo {
+      max-width: 100px;
+      max-height: 100px;
+    }
+    .logo-container-items {
+       align-self: center;
+    }
   }
   .band-container {
      display: flex;
@@ -44,14 +57,14 @@
      justify-content: flex-start;
      flex-direction: column;
      padding-bottom: 15px;
-     .band-photo {
-        // height: 300px;
-        // object-fit: fill;
-        // width: auto;
-      }
+     &:hover {
       .band-name-container {
-        padding: 20px;
-        background-color: lightgrey;
+       background-color: darkgrey;
+      }
+    }
+    .band-name-container {
+       padding: 20px;
+       background-color: lightgrey;
         .band-name {
          text-align: center;
         }
