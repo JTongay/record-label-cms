@@ -46,9 +46,9 @@
         <div class="new-releases-list">
         <% @ordered_albums.each do |b| %>
           <% if b.avatar? %>
-            <%= image_tag b.avatar.thumb, class: 'welcom-album-art' %>
+            <%= image_tag b.avatar.url, class: 'welcome-album-art' %>
           <% else %>
-           <%=	image_tag('http://www.onlineworldofwrestling.com/wp-content/uploads/2012/06/stone_cold_steve_austin_01.png', class: 'welcom-album-art')  %>
+           <%=	image_tag('http://www.onlineworldofwrestling.com/wp-content/uploads/2012/06/stone_cold_steve_austin_01.png', class: 'welcome-album-art')  %>
           <% end %>         
            <p><%=	b.title  %>, <%=	b.release_date.to_formatted_s(:long_ordinal)  %>, <%= b.bands[0].band_name %></p>
         <% end %>
@@ -57,15 +57,27 @@
     </div>
   </div>
 
-  <div class="container news">
+  <div class="news text-center">
     <div class="row news-content">
       <div class="col-md-6 col-sm-12 col-xs-12">
         <h2>News and Updates</h2>
-        <p>Here's where the fucking news and updates are gonna be</p>
+        <p>Bacon ipsum dolor amet dolore pork belly aute, drumstick quis cupidatat jerky ex jowl irure strip steak veniam ut prosciutto
+labore. Duis dolor elit meatball dolore, landjaeger tempor pork loin turkey. Culpa pastrami andouille, sint consequat picanha
+laboris elit kevin ipsum ut eu jerky. Cillum in chicken, kevin ex prosciutto pancetta chuck corned beef ground round frankfurter
+est commodo. Consequat spare ribs fugiat ball tip chuck deserunt, short loin bacon corned beef non. Pork chop leberkas bacon
+venison, doner sint quis pork loin in magna anim. In ullamco proident venison. Mollit meatloaf reprehenderit bresaola, ut
+fatback turkey laborum nulla. Tempor ex pig adipisicing prosciutto meatball. Pork loin tenderloin bresaola picanha shoulder
+ground round non cow jowl. Et nulla kevin ut, do biltong proident short ribs chuck excepteur swine meatball meatloaf.</p>
       </div>
       <div class="col-md-6 col-sm-12 col-xs-12">
         <h2>Upcoming Tours</h2>
-        <p>Eventually I'll have some stupid tours here</p>
+        <p>Bacon ipsum dolor amet dolore pork belly aute, drumstick quis cupidatat jerky ex jowl irure strip steak veniam ut prosciutto
+labore. Duis dolor elit meatball dolore, landjaeger tempor pork loin turkey. Culpa pastrami andouille, sint consequat picanha
+laboris elit kevin ipsum ut eu jerky. Cillum in chicken, kevin ex prosciutto pancetta chuck corned beef ground round frankfurter
+est commodo. Consequat spare ribs fugiat ball tip chuck deserunt, short loin bacon corned beef non. Pork chop leberkas bacon
+venison, doner sint quis pork loin in magna anim. In ullamco proident venison. Mollit meatloaf reprehenderit bresaola, ut
+fatback turkey laborum nulla. Tempor ex pig adipisicing prosciutto meatball. Pork loin tenderloin bresaola picanha shoulder
+ground round non cow jowl. Et nulla kevin ut, do biltong proident short ribs chuck excepteur swine meatball meatloaf.</p>
       </div>
     </div>
   </div>
