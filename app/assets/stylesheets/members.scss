@@ -3,4 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .new-member-section {
     padding-top: 50px;
+    .new-member-form {
+        width: 50%;
+        margin: 0 auto;
+    }
 }
