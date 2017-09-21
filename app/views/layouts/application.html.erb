@@ -30,13 +30,22 @@
               <li><%= link_to 'Add Band', new_band_path %></li>
               <li><%=	link_to 'Add Album', new_album_path %></li>
             </ul>
+            <% if logged_in? %>
+              <p class="navbar-text navbar-right">Signed in as <%= current_member.member_name %></p>
+            <% else %>
+              <div class="navbar-text navbar-right">
+                <span>Login</span>
+                <span>Signup</span>
+              </div>
+            <% end %>
+            <%= debug logged_in? %>
           </div>
           <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
       </nav>
         <% if flash[:notice] %>
-        <div class="alert alert-info" style="z-index: 10;position: relative; top: 50px;">
+        <div class="alert alert-info" style="z-index: 10;position: relative; top: 50px;" id="flash">
         <%= flash[:notice] %>
         </div>
         <% end %>

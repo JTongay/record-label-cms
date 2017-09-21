@@ -3,6 +3,11 @@
 rake tmp:cache:clear
 ```
 
+#Start live reload server
+```shell
+guard
+```
+
 * You must set the `s3_region`
 * If you are explicitly setting permissions anywhere, such as in an initializer,
   note that the format of the permissions changed from using an underscore to
