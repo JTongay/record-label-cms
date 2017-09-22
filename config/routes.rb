@@ -7,6 +7,11 @@ Rails.application.routes.draw do
   end
 
   resources :members
+  
+  # session stuff
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
 
   resources :albums, only: [ :new, :create, :edit, :index, :show ]
 

@@ -11,6 +11,7 @@ class MembersController < ApplicationController
         if params[:password] == params[:password_confirmation]
            @member = Member.create(member_params)
            if @member.save
+               session[:member_id] = @member.id
                redirect_to root_url, notice: "#{@member.member_name} was created" 
            end 
         else

@@ -1,0 +1,11 @@
+<section class="login-section">
+    <h1>Login</h1>
+    <div class="login-form">
+        <%= simple_form_for :session do |f|%>
+            <%= f.input :member_name %>
+            <%= f.input :password %>
+            <%= f.input :password_confirmation %>
+            <%= f.submit "Login", class: "btn btn-primary" %>
+        <% end %>
+    </div>
+</section>

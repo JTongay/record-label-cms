@@ -31,14 +31,16 @@
               <li><%=	link_to 'Add Album', new_album_path %></li>
             </ul>
             <% if logged_in? %>
-              <p class="navbar-text navbar-right">Signed in as <%= current_member.member_name %></p>
+              <div class="navbar-text navbar-right">
+                <span>Signed in as <%= current_member.member_name %></span>
+                <span>Not you? <%= link_to 'Logout', logout_path, :method => 'delete'%></span>
+              </div>
             <% else %>
               <div class="navbar-text navbar-right">
                 <span>Login</span>
                 <span>Signup</span>
               </div>
             <% end %>
-            <%= debug logged_in? %>
           </div>
           <!-- /.navbar-collapse -->
         </div>
