@@ -7,6 +7,11 @@
          <h1 class="logo-container-items label-name">Fake Record Label</h1>
          <%= image_tag 'random_logo.png', class: "logo logo-container-items" %>
        </div>
+       <div class="blurb-container">
+        <p class="blurb">
+          this is a blurb
+        </p>
+       </div>
        <div class="links-container">
          <span class="links"><a href="">Link 1</a></span>
          <span class="links"><a href="">| Link 1</a></span>
@@ -16,6 +21,24 @@
 
   <div class="about-us">
     <div class="about-us-content">
+      <button class="btn btn-primary test-button" data-toggle="modal" data-target="myModal">Test Button</button>
+      <div class="modal fade" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
       <h1>We're a fake record label stupids</h1>
       <p>Not only do we do record label stuff, we do record label stuff</p>
       <div class="reviews-container">

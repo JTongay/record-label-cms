@@ -46,6 +46,14 @@ $topPadding: 50px;
 
       }
 
+      .blurb-container {
+        position: absolute;
+        text-align: center;
+        .blurb {
+          color: white;
+        }
+      }
+
       .links-container {
         position: absolute;
         top: 150px;
