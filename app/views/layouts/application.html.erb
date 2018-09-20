@@ -37,8 +37,8 @@
               </div>
             <% else %>
               <div class="navbar-text navbar-right">
-                <span>Login</span>
-                <span>Signup</span>
+                <%= link_to 'Login', login_path %>
+                <%= link_to 'Signup', new_member_path %>
               </div>
             <% end %>
           </div>

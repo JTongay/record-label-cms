@@ -42,6 +42,8 @@ $topPadding: 50px;
 
         .label-name {
           color: ghostwhite;
+          padding-left: 20px;
+          font-size: 5rem;
         }
 
       }
@@ -49,6 +51,7 @@ $topPadding: 50px;
       .blurb-container {
         position: absolute;
         text-align: center;
+        padding: 10px;
         .blurb {
           color: white;
         }
@@ -56,10 +59,10 @@ $topPadding: 50px;
 
       .links-container {
         position: absolute;
-        top: 150px;
+        top: 132px;
         width: 150px;
         left: 175px;
-        display: flex;
+        display: inline-flex;
         .links {
           align-self: baseline;
           line-height: 2px;
@@ -74,6 +77,7 @@ $topPadding: 50px;
     padding-top: $topPadding;
     .about-us-content {
       text-align: center;
+      margin: 0 40px;
     }
 
     .reviews-container {
@@ -112,6 +116,9 @@ $topPadding: 50px;
           flex-direction: column;
           .welcome-album-art {
             object-fit: fill;
+            width: 60%;
+            height: 75%;
+            margin: 0 auto;
           }
         }
       }
@@ -127,6 +134,7 @@ $topPadding: 50px;
     position: inherit;
     .news-content {
       //min-height: 400px;
+      margin: 0 40px;
     }
   }
 
